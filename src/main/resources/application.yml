@@ -1,0 +1,19 @@
+## ilk baştaki .properties uzantısı .yml ile değiştirildi ( daha düzenli görüntü için)
+## eğer resource dosyası altında .yml ve .properties dosyası olursa kod .properties'i öncelikler ve .yml'ı umursamaz
+## data source url,password ve username tanımlamak zorundayız ayrıca db tarafında db'yi create etmek gerekli bağlantı url'i için
+## hibernate tarafında update ile tablo ve kolonlar mapleniyor
+## dialect tarafında hangi database'e bağlantı yapılcağı ve connector'u verilir
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/tourismInfo?characterEncoding=UTF8
+    username: root
+    password: password1234*
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  mvc:
+    format:
+      date: yyyy-MM-dd
