@@ -6,6 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 
 // Entity db'de tablo oluşturu kolonlarla(variables)
 // Data getter setter hashcode equals ekler
@@ -31,6 +35,14 @@ public class Hotel  {
 
     private boolean isPet;
 
+    private boolean isHoneymoon;
+
+    private boolean isAdult;
+
+    private boolean isFamily;
+
+    private boolean isChild;
+
     private String neighbourhood;
 
     private String location;
@@ -48,6 +60,12 @@ public class Hotel  {
     private Integer commentNum;
 
     private Integer price;
+
+    private String kitchenNumber;
+
+    private String hotelConcept;
+
+
 
 
 }
